@@ -1,13 +1,14 @@
 *{
     padding: 0;
     margin: 0;
+    /* height: 100%; */
     /* transition: all 1s; */
 }
 
 body{
     height: 200%;
     width: 100%;
-    background-color: rgb(255, 255, 255);    
+    background-color: #f4f7fc;    
     
 }
 
@@ -24,21 +25,25 @@ body{
     background-color: rgb(204, 162, 162);
     border-radius: 13px solid rgba(0, 0, 0, 0.253);
     z-index: 1;    
+    box-shadow: rgba(17, 3, 3, 0.35) 0px 10px 15px;
 }
 
 .flex-header{
     background-color: rgb(124, 102, 102);
     flex: 1;
+    
     /* border: 1px solid black; */      
 }
 
 .flex-header:hover{
     background-color: rgb(46, 34, 34);
+    cursor:pointer;
     transition: 0.1s all;    
 }
 
 .flex-header:hover p{
     color: white;  
+    cursor: pointer;
 }
 
 .flex-header p{
@@ -58,10 +63,11 @@ body{
     position: relative;
     display: block;
     height: 100vh;
-    width: 90vw;
+    width: 100%;
     margin: auto;
-    top: 8vh;
-    background-image:url('Ana Dobre.jpg');
+    top: 8vh;    
+    /* background-image:url('images/Ana\ Dobre.jpg'); */
+    background-image: url('https://unsplash.it/1200');
     background-position:center;
     background-repeat: no-repeat;
     background-size:cover;
@@ -80,66 +86,172 @@ body{
     font-size: 4rem;        
     transition: ease-in;
     transition-delay: 1s;
-    background-color: rgba(127, 255, 212, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 10px;
-    transform: rotate(-5deg);
 }
+
+
 /* intro end */
 .another{
-    position: relative;
     display: block;
-    padding: 150px 30px;
-    box-sizing: border-box;
-    height: 100vh;
-    top: 8vh;
-    margin: auto;
-    width: 90vw;  
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 160px 120px 50px 120px;    
+    background-color: rgb(233, 227, 220);
+    
+    box-sizing: border-box;  
     
       
     /* background-color: rgb(185, 140, 140); */
     /* overflow: scroll; */
 }
 
-.another p{
-    initial-letter: 10px;
-    font-size: 2rem;
-    /* background-color: rgba(0, 255, 255, 0.185); */
+.another p{    
+    font-size: 2vw;    
     top: 10vh;
     left: 0;
-    line-height: 4rem;
+    line-height: 3.5rem;
     text-align: justify;
-    text-indent: 6vw;
-    
+    text-indent: 6vw; 
 }
 
 .another p span{
-    color:rgb(218, 208, 208);
+    color:rgb(95, 18, 18);
     font-size: 5rem;
-    margin-right: 5px;
-    top: 1120px;
+    margin-right: 5px;    
 }
 
-/* footer start */
-footer{
+.another::after{
+    content: '';
     position: absolute;
     display: block;
-    bottom: 0;
-    width: 100%;
-    height: 15vh;
-    background-color: yellow;
+    height: 3vh;
+    width: 90%;    
+    left:5%;
+    bottom:-1.5vh;
+    background-color: rgb(107, 105, 105);
+    box-shadow: rgba(17, 3, 3, 0.35) 0px 5px 15px;
+    z-index: 22;
 }
 
+
+
+
+/* dezvoltare personala start */
+
+.dezvoltare_personala_main {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 160px 120px 50px 120px;    
+    background-color: bisque;
+    
+    box-sizing: border-box;
+}
+
+.dezvoltare_personala_main h2{
+    
+    font-size: 4rem;
+    text-align: center;
+    color: cadetblue;
+    text-align: center;
+    text-shadow:  rgba(17, 3, 3, 0.35) 0px 5px 6px;
+}
+
+.dezvoltare_personala_main h4{
+    font-size: 2.5rem;
+    display: relative;
+    margin: 40px;
+    text-align: center;
+}
+
+.dezvoltare_personala_main p{
+    font-size: 2rem;
+}
+
+.dezvoltare_personala_main hr{
+    position: relative;
+    display: block;
+    height: 3px;
+    background-color: teal;
+    border-radius: 50%;
+    width: 70%;
+    margin: auto;
+    top: 20px;
+}
+
+.dezvoltare_personala_main::after{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 3vh;
+    width: 90%;    
+    left:5%;
+    bottom:-1.5vh;
+    background-color: rgb(194, 107, 107);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+/* despre terapie start */
+
+.despre_terapie_main{
+    background-color: #0093E9;
+    background-image: linear-gradient(58deg, #0093E9 0%, #80D0C7 77%, #aa2557 100%);    
+    display: block;    
+    width: 100%;
+    min-height: 100vh;
+    padding: 160px 120px 50px 120px;
+    
+    
+    
+    box-sizing: border-box;
+    
+}
+
+.despre_terapie_main p{
+    font-size: 2rem;
+    text-align:start;       
+}
+
+.despre_terapie_main h2{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: -55px;
+    text-shadow:  rgba(17, 3, 3, 0.35) 0px 5px 6px;
+}
+
+.despre_terapie_main h3{
+    font-size: 2.3rem;
+    text-align: center;
+    margin: 20px;
+    color: rgb(19, 36, 30);
+    text-decoration: underline;    
+}
+
+/* despre terapie end */
+/* footer start */
 
 .footer{
-    position: relative;    
     display: block;
-    height: 14vh;
-    bottom: 0;    
-    width: 100%;
-    background-color: red;  
+    position: absolute;
+    height: 10vh;
+    width: 100%;    
+    background-color:rgb(0, 0, 0);
+    text-align: center;
+    color: black;    
 }
 
-.footer h3{
-    color: aliceblue ;
+.footer .social-media{
+    position: absolute;     
+    left: 50%;
+    transform: translate(-50%, 0);   
+    height: 100%;
+    width: 40%;
+    background-color: white;
 }
+
