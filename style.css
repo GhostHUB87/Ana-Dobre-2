@@ -6,10 +6,10 @@
 }
 
 body{
-    height: 200%;
+    height: 100%;
     width: 100%;
     background-color: #f4f7fc;    
-    
+    /* position: relative; */
 }
 
 /* header start */
@@ -24,15 +24,13 @@ body{
     height: 8vh;
     background-color: rgb(204, 162, 162);
     border-radius: 13px solid rgba(0, 0, 0, 0.253);
-    z-index: 1;    
+    z-index: 999;    
     box-shadow: rgba(17, 3, 3, 0.35) 0px 10px 15px;
 }
 
 .flex-header{
-    background-color: rgb(124, 102, 102);
-    flex: 1;
-    
-    /* border: 1px solid black; */      
+    background-color: rgb(163, 102, 102);
+    flex: 1;    
 }
 
 .flex-header:hover{
@@ -51,7 +49,7 @@ body{
     text-align: center;  
     top: 50%;
     transform:translateY(-50%);
-    color: antiquewhite;
+    color: white;
     font-size: 1rem;
     font-weight: 700;
 }
@@ -147,8 +145,7 @@ body{
     width: 100%;
     min-height: 100vh;
     padding: 160px 120px 50px 120px;    
-    background-color: bisque;
-    
+    background-color: bisque;    
     box-sizing: border-box;
 }
 
@@ -193,6 +190,7 @@ body{
     bottom:-1.5vh;
     background-color: rgb(194, 107, 107);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 2;
 }
 
 
@@ -200,17 +198,14 @@ body{
 /* despre terapie start */
 
 .despre_terapie_main{
-    background-color: #0093E9;
-    background-image: linear-gradient(58deg, #0093E9 0%, #80D0C7 77%, #aa2557 100%);    
-    display: block;    
+    display: block;
+    position: relative;
     width: 100%;
     min-height: 100vh;
-    padding: 160px 120px 50px 120px;
-    
-    
-    
+    padding: 160px 120px 50px 120px;     
+    background-color: #0093E9;
+    background-image: linear-gradient(58deg, #0093E9 0%, #80D0C7 77%, #aa2557 100%);        
     box-sizing: border-box;
-    
 }
 
 .despre_terapie_main p{
@@ -233,25 +228,214 @@ body{
     text-decoration: underline;    
 }
 
+.despre_terapie_main::after{
+   content: '';
+    position: absolute;
+    display: block;
+    height: 3vh;
+    width: 90%;    
+    left:5%;
+    bottom:-1.5vh;
+    background-color: rgb(107, 105, 105);
+    box-shadow: rgba(17, 3, 3, 0.35) 0px 5px 15px;
+    z-index: 132;
+}
+
 /* despre terapie end */
+
+/* cabinet start */
+.cabinetul{
+    background-color: #e8e8e8;
+background-image: linear-gradient(0deg, #e8e8e8 0%, #a8a8a8 100%);
+
+    display: block; 
+    position: relative;   
+    width: 100%;
+    min-height: 100vh;
+    padding: 160px 120px 50px 120px;   
+    box-sizing: border-box;   
+}
+
+.cabinetul h1{
+    background-color: rgb(119, 177, 62);    
+    color: rgb(56, 14, 14);
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 100px 200px;    
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* cabinet end */
+
+/* contact start */
+.contact_main{     
+    display: block; 
+    position: relative;   
+    width: 100%;    
+    height: 100vh;
+    padding: 5vh 120px 5vh 120px;   
+    box-sizing: border-box;
+    background-image: url(./images/contact\ image.jpg);   
+    background-repeat: no-repeat;     
+    background-size: cover;     
+    
+}
+
+
+
+.example{
+    height: 100%;
+    width: 100%;
+    /* background: rgba(255, 255, 255, 0.5); */
+    opacity: 1;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 2rem;
+}
+
+.example h1{
+    position: relative;
+    display: inline-block;
+    color: white;
+    line-height: 47px;
+    border-radius: 10px;
+    top: 40px;
+    font-weight: bold;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; 
+    background-color: rgb(44, 44, 44);
+    
+}
+
+.contact_form{
+    /* background-color: red; */
+    height: 60vh;
+    position: relative;
+    top: 50px;
+    display: block;
+    font-size: 2rem;
+   
+}
+
+#fname{
+    display: block;
+    position: relative;
+    width: 50%;
+    height: 4vh;
+    text-align: center;    
+    margin: auto;
+    margin-top: 10px;
+    background-color: rgba(207, 207, 207, 0.9);
+    top:2vh;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    box-shadow: rgb(225, 228, 231) 0px 20px 30px -10px; 
+}
+
+#email{
+    display: block;
+    position: relative;
+    width: 50%;
+    height: 4vh;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    background-color: rgba(207, 207, 207, 0.9);
+    top:2vh;
+    font-size: 1.3rem;
+    border: none;    
+    outline: none;
+    box-shadow: rgb(225, 228, 231) 0px 20px 30px -10px; 
+}
+
+#textarea{
+    display: block;
+    position: relative;
+    width: 50%;
+    resize: none;
+    height: 33vh;    
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #eeeeeeea;
+    top:2vh;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    box-shadow: rgb(212, 212, 212) 0px 20px 30px -10px; 
+}
+
+.contact_form button{
+    position: relative;
+    top: 3vh;
+    padding: 5px;
+    width: 50%;
+    height: 6vh;
+    background-color: black;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.contact_form button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+/* contact end */
+
 /* footer start */
 
 .footer{
-    display: block;
-    position: absolute;
-    height: 10vh;
-    width: 100%;    
+    /* display: block; */
+    position: relative;
+    height: 10%;
+    width: 100%;       
     background-color:rgb(0, 0, 0);
     text-align: center;
     color: black;    
 }
 
-.footer .social-media{
-    position: absolute;     
+.social-container{
+    position: absolute;
+    display: block;     
     left: 50%;
     transform: translate(-50%, 0);   
     height: 100%;
-    width: 40%;
+    width: 100%;
     background-color: white;
 }
 
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+}
+
+.social-icons > li{
+    
+    display: inline-block;
+    margin: 0.15em;
+    position: relative;
+    font-size: 1.2em;  
+}
+
+.social-icons > li > i{    
+    color: #fff;
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    transition: all ease-out;
+  
+}
+
+.social-icons a{
+    display: inline-block;
+}
