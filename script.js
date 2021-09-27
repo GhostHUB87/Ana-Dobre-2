@@ -18,7 +18,7 @@ function scrollFunction() {
     
     if (document.body.scrollTop > 750 || document.documentElement.scrollTop > 750) {
         var header = document.getElementsByClassName('header')[0]        
-        header.style.height = "6vh";
+        header.style.height = "16vh";
 
 
         
@@ -43,4 +43,11 @@ function scrollFunction() {
 
 
 // just jquery down
+
+
+
+
+console.log('hello  ')
+
+const Environment = require('jest-environment-jsdom');
 

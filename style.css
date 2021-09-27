@@ -29,7 +29,7 @@ body{
 }
 
 .flex-header{
-    background-color: rgb(163, 102, 102);
+    background-color: rgb(108, 45, 159) ;
     flex: 1;    
 }
 
@@ -206,11 +206,13 @@ body{
     background-color: #0093E9;
     background-image: linear-gradient(58deg, #0093E9 0%, #80D0C7 77%, #aa2557 100%);        
     box-sizing: border-box;
+    text-indent: 6vw;
 }
 
 .despre_terapie_main p{
     font-size: 2rem;
-    text-align:start;       
+    text-align:start;
+         
 }
 
 .despre_terapie_main h2{
@@ -375,19 +377,21 @@ background-image: linear-gradient(0deg, #e8e8e8 0%, #a8a8a8 100%);
     padding: 5px;
     width: 50%;
     height: 6vh;
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 1.3rem;
-    border: none;
+    border: 2px solid black;
     cursor: pointer;
     border-radius: 7px;
+    transition: 0.2s all;
 }
 
 .contact_form button:hover{
-    background-color: white;
-    color: black;
+    background-color: rgb(27, 27, 27);
+    color: rgb(255, 255, 255);
     border: 2px solid black;
     border-radius: 7px;
+    border: 3px solid rgb(255, 255, 255)
 }
 /* contact end */
 
@@ -398,44 +402,98 @@ background-image: linear-gradient(0deg, #e8e8e8 0%, #a8a8a8 100%);
     position: relative;
     height: 10%;
     width: 100%;       
-    background-color:rgb(0, 0, 0);
+    background-color:rgb(108, 45, 159) ;
     text-align: center;
-    color: black;    
+    color: #AB0066;    
 }
 
-.social-container{
-    position: absolute;
-    display: block;     
-    left: 50%;
-    transform: translate(-50%, 0);   
-    height: 100%;
-    width: 100%;
-    background-color: white;
+.social-container {
+  display: inline-block;
+  position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
 }
 
-.social-icons {
-  padding: 0;
-  list-style: none;
-  margin: 1em;
-}
-
-.social-icons > li{
-    
-    display: inline-block;
-    margin: 0.15em;
+.social-container a{
+    color:#fff;
+    background: #DB6E82;
+    border-radius:4px;
+    text-align:center;
+    text-decoration:none;
+    font-family: fontawesome;
     position: relative;
-    font-size: 1.2em;  
-}
-
-.social-icons > li > i{    
-    color: #fff;
-    position: absolute;
-    top: 21px;
-    left: 21px;
-    transition: all ease-out;
-  
-}
-
-.social-icons a{
     display: inline-block;
+    width:40px;
+    height:28px;
+    padding-top:12px;
+    margin:0 2px;
+    -o-transition:all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    -webkit-font-smoothing: antialiased;
+}
+
+.social-container a:hover{
+    background: #ef92a3;
+}
+
+.social-container a span{    
+    color:#666;
+    position:absolute;
+    font-family:sans-serif;
+    bottom:0;
+    left:-25px;
+    right:-25px;
+    padding:5px 7px;
+    z-index:-1;
+    font-size:14px;
+    border-radius:2px;
+    background:#fff;
+    visibility:hidden;
+    opacity:0;
+    -o-transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-container a span::before{
+    content:'';
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  position:absolute;
+  bottom:-5px;
+  left:40px;
+}
+
+.social-container a:hover span{
+  bottom:50px;
+  visibility:visible;
+  opacity:1;
+}
+
+a:nth-of-type(1):before {
+content:'\f09a';
+}
+a:nth-of-type(2):before {
+content:'\f16d';
+}
+a:nth-of-type(3):before {
+content:'\f0e1';
+}
+a:nth-of-type(4):before {
+content:'\f232';
+}
+a:nth-of-type(5):before {
+content:'\f167';
+}
+a:nth-of-type(6):before {
+content:'\f10b';
 }
